@@ -14,9 +14,9 @@ source:
   sha256: 181ab87721b1e6e3859c60d12eea2f67a7135bfa679db73c20a9ef76d82c4b4a
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,8 +46,7 @@ about:
     and methods to handle the results from the ML viewpoint.  It also includes a number
     of convenience tools for testing and developing your own models.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
