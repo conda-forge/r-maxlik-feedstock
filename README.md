@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=maxLik
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Functions for Maximum Likelihood (ML) estimation and non-linear optimization, and related tools.  It includes a unified way to call different optimizers, and classes and methods to handle the results from the ML viewpoint.  It also includes a number of convenience tools for testing and developing your own models.
 
