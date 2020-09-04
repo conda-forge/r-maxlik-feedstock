@@ -39,10 +39,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=maxLik
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Functions for Maximum Likelihood (ML) estimation and non-linear optimization, and related tools.  It includes a unified way to call different optimizers, and classes and methods to handle the results from the ML viewpoint.  It also includes a number of convenience tools for testing and developing your own models.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
