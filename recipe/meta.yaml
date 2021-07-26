@@ -23,12 +23,15 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-generics
     - r-misctools >=0.6_8
     - r-sandwich
   run:
     - r-base
+    - r-generics
     - r-misctools >=0.6_8
     - r-sandwich
 
