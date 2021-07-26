@@ -1,4 +1,4 @@
-{% set version = "1.4-8" %}
+{% set version = "1.5-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/maxLik_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/maxLik/maxLik_{{ version }}.tar.gz
-  sha256: feeea61554565deffc2fdffdef68e65fc16f913e32712d2d5f1c5757859c7d36
+  sha256: 7cee05be0624b6a76911fa7b0d66f3e1b78460e0c55ed8bc904ce1e8af7bb15d
 
 build:
   merge_build_host: true  # [win]
@@ -23,12 +23,15 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-generics
     - r-misctools >=0.6_8
     - r-sandwich
   run:
     - r-base
+    - r-generics
     - r-misctools >=0.6_8
     - r-sandwich
 
