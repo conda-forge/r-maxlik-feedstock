@@ -1,4 +1,4 @@
-{% set version = "1.5-2.2" %}
+{% set version = "1.6-10" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/maxLik_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/maxLik/maxLik_{{ version }}.tar.gz
-  sha256: 554cdc9985f818d7e6a7b138cd9953aee34861795a5ff799979ec0c8616b6c1a
+  sha256: 1f13c209c3b8b0fff704088cd032ec6cc57a04b6c5a5abdbd011c895db54ccf6
 
 build:
   number: 0
@@ -41,7 +41,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=maxLik
   license: GPL-2.0-or-later
-  summary: Functions for Maximum Likelihood (ML) estimation and non-linear optimization, and related tools.  It includes a unified way to call different optimizers, and classes and methods to handle the results from the ML viewpoint.  It also includes a number of convenience tools for testing and developing your own models.
+  summary: Functions for Maximum Likelihood (ML) estimation and non-linear optimization, and related tools.  It includes a unified way to call different optimizers, and classes and methods to handle the results from the ML viewpoint.  It also includes a number of convenience tools for testing and developing your own 
+    models.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
